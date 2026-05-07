@@ -15,6 +15,8 @@ import org.springframework.data.annotation.Id;
 @AllArgsConstructor
 
 public class Aluno {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private String nome;
 }
