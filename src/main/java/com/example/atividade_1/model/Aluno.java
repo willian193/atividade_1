@@ -8,13 +8,13 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+import jakarta.persistence.Id;
 
 @Entity
 @Data
-@Table(name = "Alunos")
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "alunos")
 
 public class Aluno {
     @Id
