@@ -31,10 +31,11 @@ public class AlunoController {
         return  ResponseEntity.ok(service.salvar(aluno));
     }
 
-    public ResponseEntity<Aluno> atualizar(@PathVariable Long id,
-                                            @RequestBody Aluno dados){
+    @PutMapping("/{id}")
+    public ResponseEntity<Aluno> atualizar(
+            @PathVariable Long id, @RequestBody Aluno dados) {
         return ResponseEntity.ok(service.atualizar(id, dados));
-    }
+}
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> excluir(@PathVariable Long id){
